@@ -1,0 +1,107 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    border-bottom: brown solid 10px;
+}
+
+.nav-links {
+    padding-top: 20px;
+}
+
+    .nav-links ul {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        color: white;
+    }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            border-bottom: solid white;
+            font-family: 'Hedvig Letters Serif', serif;
+            display: flex;
+        }
+
+
+
+header .logo h1 span {
+    color: brown;
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+.container-fuild {
+    display: flex;
+    justify-content: center;
+    margin-top:10%;
+}
+
+.search-Travel {
+    width: 80%;
+    height: 150px;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom: solid red;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+    .search-Travel form {
+        text-align: center;
+        margin-top: 7px;
+        padding: 20px;
+    }
+
+        .search-Travel form select {
+            width: 200px;
+            height: 50px;
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            outline: none;
+            border-bottom: solid red;
+        }
+
+        .search-Travel form input {
+            width: 200px;
+            height: 50px;
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            outline: none;
+            border-bottom: solid red;
+        }
+
+        .search-Travel form .search {
+            width: 250px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 7px;
+            border: none;
+            padding: 5px;
+            outline: none;
+            color: white;
+        }
+
+        .search-Travel form span {
+            color: white;
+            font-size: 40px;
+        }
+
+.swap {
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+

@@ -1,0 +1,65 @@
+﻿@model TicketProject.Models.Travel
+
+<style>
+    .row1{
+        margin-left:35%;
+        margin-top:3%;
+    }
+    .row1  form{
+         text-align:center;
+    }
+    .row1 form .form-group{
+        margin-top:30px;  
+    }
+
+    .row1 form input{
+        border-bottom:solid red;
+        width:300px;
+    }
+</style>
+
+<div class="row1 row">
+    <div class="col-md-4">
+        <form asp-action="UpdateTravel">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TravelID" />
+            <div class="form-group">
+                <input asp-for="Location" class="form-control"   placeholder="Location"/>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Destination" class="form-control"  placeholder="Destination"/>
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="duration" class="form-control"  placeholder="Duration" />
+                <span asp-validation-for="duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Start" class="form-control"   placeholder="Start"/>
+                <span asp-validation-for="Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="End" class="form-control"  placeholder="End"/>
+                <span asp-validation-for="End" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="passengers" class="form-control"   placeholder="Passengers"/>
+                <span asp-validation-for="passengers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Price" class="form-control" placeholder="Price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

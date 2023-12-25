@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Rethink+Sans:ital,wght@1,500&display=swap');
+.navbar {
+    background-color:whitesmoke;
+    border-bottom: solid red;
+    font-family: 'Rethink Sans', sans-serif;
+    border-radius:10px;
+}
+
+.navbar-nav{
+    margin-left:auto;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color:black;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Rethink+Sans:ital,wght@1,500&display=swap');
+
+.containered {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient(rgb(0,0,0,0.75),rgb(0,0,0,0.75)),url(../image/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius:10px;
+}
+
+    .containered .into-form {
+        width: 600px;
+        height: 550px;
+        margin-top: 5%;
+       
+      
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+.into-form form {
+    text-align: center;
+}
+
+    .into-form form span {
+        font-size: 40px;
+        color: red;
+    }
+
+    .into-form form .form-item {
+        padding: 5px;
+    }
+
+.form-item input {
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 15px;
+    border:none;
+    border-bottom:solid red;
+
+}

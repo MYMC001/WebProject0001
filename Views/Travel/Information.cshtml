@@ -1,0 +1,133 @@
+﻿@model IEnumerable<TicketProject.Models.Travel>
+
+
+    <style>
+
+        .table {
+        font-family: 'Rethink Sans', sans-serif;
+        background-color:grey;
+        border-radius:5px;
+        color:white;
+    }
+
+    .table tbody {
+        border-bottom:red solid;
+    }
+       .table tbody a{
+            display:flex;
+            text-decoration:none;
+            text-align:center;
+        font-family: 'Rethink Sans', sans-serif;
+    }
+
+    tr a {
+        text-decoration: none;
+    }
+
+    tr .edit {
+        background-color: blue;
+        border-radius: 5px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .edit a {
+        color: white;
+    }
+
+    tr .delete {
+        background-color: red;
+        border-radius: 5px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .delete a {
+        color: white;
+    }
+
+    tr .add {
+        background-color: green;
+        border-radius: 5px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .add a {
+        color: white;
+    }
+
+    </style>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.passengers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.passengers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                    <button  class="edit"><a asp-action="UpdateTravel" asp-route-id="@item.TravelID"><span class="material-symbols-outlined">edit</span>Edit</a> </button>
+
+            </td>
+            <td>
+                    <button  class="add"><a asp-action="AddTravel">Create New<span class="material-symbols-outlined">add</span></a></button>
+            </td>
+
+            <td>
+
+                    <button  class="delete"><a asp-action="DeleteTravel" asp-route-id="@item.TravelID"><span class="material-symbols-outlined">delete </span>Delete </a></button>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
